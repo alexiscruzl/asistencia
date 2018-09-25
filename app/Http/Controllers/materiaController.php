@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\post;
+use App\materias;
 use Illuminate\Http\Request;
 
-class formulario extends Controller
+class materiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,9 @@ class formulario extends Controller
     public function index()
     {
         //
-      return view('home');
+      return view('Materias.indexMaterias');
+      $materias = materia::all();
+      return view ('materias.indexMateria', compac('materias'));
     }
 
     /**
@@ -42,10 +44,10 @@ class formulario extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\post  $post
+     * @param  \App\materias  $materias
      * @return \Illuminate\Http\Response
      */
-    public function show(post $post)
+    public function show(materias $materias)
     {
         //
     }
@@ -53,10 +55,10 @@ class formulario extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\post  $post
+     * @param  \App\materias  $materias
      * @return \Illuminate\Http\Response
      */
-    public function edit(post $post)
+    public function edit(materias $materias)
     {
         //
     }
@@ -65,10 +67,10 @@ class formulario extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\post  $post
+     * @param  \App\materias  $materias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, post $post)
+    public function update(Request $request, materias $materias)
     {
         //
     }
@@ -76,10 +78,10 @@ class formulario extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\post  $post
+     * @param  \App\materias  $materias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(post $post)
+    public function destroy(materias $materias)
     {
         //
     }
